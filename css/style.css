@@ -1,1 +1,76 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+body, html {
+  background: #2a3036;
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+}
+
+#intro {
+  font-family: "Lucida Console", Monaco, monospace;
+  font-size: 1.2rem;
+  color: white;
+  margin: auto;
+}
+
+#intro p {
+  margin: auto;
+}
+
+pre {
+  display: block;
+  color: white;
+  white-space: pre-wrap;
+  padding: 10px;
+  line-height: 1.5em;
+  font-size: 1.2rem;
+  font-family: "Lucida Console", Monaco, monospace;
+}
+
+pre .string {
+  color: #C8F26E;
+}
+
+pre .keywordsJsReg {
+  color: #FD6C6E;
+}
+
+pre .specialJsReg {
+  color: #6DE4D1;
+}
+
+pre .globalJsReg {
+  color: #A1E46D;
+  font-weight: bold;
+}
+
+pre .inlineCommentReg, pre .specialCommentReg {
+  color: #566270;
+}
+
+pre .specialMethReg {
+  color: #ffd23f;
+}
+
+pre .htmlTags {
+  color: #FD6C6E;
+}
+
+pre .mysqlReg {
+  color: #1D968C;
+}
+
+pre .specialPhpReg {
+  color: #597EA7;
+}
+
+pre a {
+  color: #55CCC3;
+  text-decoration: none;
+  -webkit-transition: 0.4s color;
+  transition: 0.4s color;
+}
+
+pre a:hover {
+  color: #C24E5A;
+}
+/*# sourceMappingURL=style.css.map */

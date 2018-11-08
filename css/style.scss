@@ -1,0 +1,59 @@
+$colors: ( /* SASS MAP is like an object */
+    gray:#566270,
+    turquoise: #55CCC3,
+    green: #C8F26E,
+    lightpink: #FD6C6E,
+    darkpink: #C24E5A,
+    yellow: #ffd23f
+);
+
+@function color($color-name){ /* Function named color to get information from MAP */
+  @return map-get($colors, $color-name)
+}
+
+body, html{
+  background: darken(color(gray), 20%);
+  height: 100%;
+  display: grid;
+}
+#intro{
+    font-family: "Lucida Console", Monaco, monospace;
+    font-size: 1.2rem;
+    color: white;
+    margin: auto;
+  p{
+    margin: auto;
+  }
+}
+pre { 
+     display: block; 
+     color: white;
+     white-space: pre-wrap; 
+     padding: 10px; 
+     line-height: 1.5em; 
+    font-size: 1.2rem;
+     font-family: "Lucida Console", Monaco, monospace;
+    .string {color:color(green);}
+    .keywordsJsReg {color:color(lightpink);}
+    .specialJsReg {color:#6DE4D1;}
+    .globalJsReg {color:#A1E46D;font-weight:bold;}
+    .inlineCommentReg, .specialCommentReg{color:color(gray);}
+    .specialMethReg {color:color(yellow);}
+    .htmlTags {color:color(lightpink);}
+    .mysqlReg {color:#1D968C;}
+    .specialPhpReg{ color:#597EA7;}
+  
+  a{
+    color: color(turquoise);
+    text-decoration: none;
+    transition: 0.4s color;
+    &:hover{
+        color:color(darkpink);
+    }
+  }
+}
+
+
+// .no-js{
+    
+// }
