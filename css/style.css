@@ -1,8 +1,14 @@
+*, *::after, *::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 body, html {
   background: #2a3036;
   height: 100%;
   display: -ms-grid;
   display: grid;
+  margin: 0;
 }
 
 #intro {
@@ -72,5 +78,21 @@ pre a {
 
 pre a:hover {
   color: #C24E5A;
+}
+
+.no-js pre span:nth-of-type(1), .no-js pre span:nth-of-type(8) {
+  color: #566270;
+}
+
+.no-js pre span:nth-of-type(2) {
+  color: #FD6C6E;
+}
+
+.no-js pre span:nth-of-type(3) {
+  color: #ffd23f;
+}
+
+.no-js pre span:nth-of-type(4), .no-js pre span:nth-of-type(5), .no-js pre span:nth-of-type(6), .no-js pre span:nth-of-type(7) {
+  color: #C8F26E;
 }
 /*# sourceMappingURL=style.css.map */
