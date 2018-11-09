@@ -10,11 +10,15 @@ $colors: ( /* SASS MAP is like an object */
 @function color($color-name){ /* Function named color to get information from MAP */
   @return map-get($colors, $color-name)
 }
+*, *::after, *::before{
+  box-sizing: border-box;
+}
 
 body, html{
   background: darken(color(gray), 20%);
   height: 100%;
   display: grid;
+  margin: 0;
 }
 #intro{
     font-family: "Lucida Console", Monaco, monospace;
