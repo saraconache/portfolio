@@ -33,7 +33,9 @@
 window.addEventListener("load", syntaxHighlights); 
 
 
-
+/* No Javascript enabled? Fallback */
+var noJavascriptEnabled = document.querySelector('HTML');
+noJavascriptEnabled.classList.remove('no-js');
 
 /* Re-create typing effect */
 var i = 0;
@@ -55,12 +57,7 @@ intro.addEventListener("click", function(e) {
 });
 
 
-
-/* No Javascript enabled? Fallback */
-var noJavascriptEnabled = document.querySelector('HTML');
-noJavascriptEnabled.classList.remove('no-js');
-
-/* MENU */
+/* main menu toggling */
 var nav = document.getElementById('nav');
 var navlinks = nav.getElementsByTagName('a');
 
@@ -79,8 +76,8 @@ document.getElementById('nav-icon').addEventListener('click', function(e) {
     toggleNav();
 });
 
-// for(var i = 0; i < navlinks.length; i++) {
-//     navlinks[i].addEventListener('click', function() {
-//       toggleNav();
-//   });
-// }
+for(var i = 0; i < navlinks.length; i++) {
+    navlinks[i].addEventListener('click', function() {
+      toggleNav();
+  });
+}

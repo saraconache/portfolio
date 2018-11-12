@@ -91,7 +91,7 @@ pre {
       position: fixed;
       bottom: 60px;
       left: 5px;
-      height: 17rem;
+      height: 12rem;
       opacity: 0;
       pointer-events: none;
       list-style: none;
@@ -123,7 +123,7 @@ pre {
     }
     li:hover::after{
       display: block;
-      font-size: 0.8rem;
+      font-size: 0.7rem;
       color: white;
     }
    li:nth-of-type(1):hover::after{
@@ -195,3 +195,9 @@ pre {
             transform: rotate(90deg);
   }
   
+header{
+  width: 5.5rem;
+  height: 100vh;
+  background: inherit;
+  position: fixed;
+}
