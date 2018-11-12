@@ -14,6 +14,15 @@ body, html {
   display: -ms-grid;
   display: grid;
   margin: 0;
+  border: 1px solid white;
+}
+
+header {
+  width: 5.5rem;
+  height: 100vh;
+  background: inherit;
+  position: fixed;
+  border: 1px solid white;
 }
 
 #intro {
@@ -27,7 +36,7 @@ body, html {
   margin: auto;
 }
 
-pre {
+#intro pre {
   display: block;
   color: white;
   white-space: pre-wrap;
@@ -37,68 +46,52 @@ pre {
   font-family: "Lucida Console", Monaco, monospace;
 }
 
-pre .string {
+#intro pre .string {
   color: #C8F26E;
 }
 
-pre .keywordsJsReg {
+#intro pre .keywordsJsReg {
   color: #FD6C6E;
 }
 
-pre .specialJsReg {
+#intro pre .specialJsReg {
   color: #6DE4D1;
 }
 
-pre .globalJsReg {
+#intro pre .globalJsReg {
   color: #A1E46D;
   font-weight: bold;
 }
 
-pre .inlineCommentReg, pre .specialCommentReg {
+#intro pre .inlineCommentReg, #intro pre .specialCommentReg {
   color: #566270;
 }
 
-pre .specialMethReg {
+#intro pre .specialMethReg {
   color: #ffd23f;
 }
 
-pre .htmlTags {
+#intro pre .htmlTags {
   color: #FD6C6E;
 }
 
-pre .mysqlReg {
+#intro pre .mysqlReg {
   color: #1D968C;
 }
 
-pre .specialPhpReg {
+#intro pre .specialPhpReg {
   color: #597EA7;
 }
 
-pre a {
+#intro pre a {
   color: #55CCC3;
   text-decoration: none;
   -webkit-transition: 0.4s color;
   transition: 0.4s color;
 }
 
-pre a:hover {
+#intro pre a:hover {
   color: #C24E5A;
-}
-
-.no-js pre span:nth-of-type(1), .no-js pre span:nth-of-type(8) {
-  color: #566270;
-}
-
-.no-js pre span:nth-of-type(2) {
-  color: #FD6C6E;
-}
-
-.no-js pre span:nth-of-type(3) {
-  color: #ffd23f;
-}
-
-.no-js pre span:nth-of-type(4), .no-js pre span:nth-of-type(5), .no-js pre span:nth-of-type(6), .no-js pre span:nth-of-type(7) {
-  color: #C8F26E;
 }
 
 nav {
@@ -235,10 +228,20 @@ nav.active ul {
   transform: rotate(90deg);
 }
 
-header {
-  width: 5.5rem;
-  height: 100vh;
-  background: inherit;
-  position: fixed;
+/* If Javascript isn't enabled: */
+.no-js pre span:nth-of-type(1), .no-js pre span:nth-of-type(8) {
+  color: #566270;
+}
+
+.no-js pre span:nth-of-type(2) {
+  color: #FD6C6E;
+}
+
+.no-js pre span:nth-of-type(3) {
+  color: #ffd23f;
+}
+
+.no-js pre span:nth-of-type(4), .no-js pre span:nth-of-type(5), .no-js pre span:nth-of-type(6), .no-js pre span:nth-of-type(7) {
+  color: #C8F26E;
 }
 /*# sourceMappingURL=style.css.map */
