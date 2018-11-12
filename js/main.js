@@ -59,3 +59,28 @@ intro.addEventListener("click", function(e) {
 /* No Javascript enabled? Fallback */
 var noJavascriptEnabled = document.querySelector('HTML');
 noJavascriptEnabled.classList.remove('no-js');
+
+/* MENU */
+var nav = document.getElementById('nav');
+var navlinks = nav.getElementsByTagName('a');
+
+function toggleNav() {
+
+  if(nav.classList.contains('active')){
+    nav.classList.remove('active')}
+    else{nav.classList.add('active') }
+
+    // ternary operator example
+    // (nav.classList.contains('active')) ? nav.classList.remove('active') : nav.classList.add('active');
+  }
+
+document.getElementById('nav-icon').addEventListener('click', function(e) {
+    e.preventDefault();
+    toggleNav();
+});
+
+// for(var i = 0; i < navlinks.length; i++) {
+//     navlinks[i].addEventListener('click', function() {
+//       toggleNav();
+//   });
+// }
