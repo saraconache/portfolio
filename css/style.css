@@ -8,31 +8,214 @@
   -webkit-font-smoothing: antialiased;
 }
 
-body, html {
+/* If Javascript isn't enabled: */
+.no-js pre span:nth-of-type(1), .no-js pre span:nth-of-type(8) {
+  color: #566270;
+}
+
+.no-js pre span:nth-of-type(2) {
+  color: #FD6C6E;
+}
+
+.no-js pre span:nth-of-type(3) {
+  color: #ffd23f;
+}
+
+.no-js pre span:nth-of-type(4), .no-js pre span:nth-of-type(5), .no-js pre span:nth-of-type(6), .no-js pre span:nth-of-type(7) {
+  color: #C8F26E;
+}
+
+.autoHeight {
+  height: auto;
+}
+
+.introHeight {
+  height: 100%;
+}
+
+body {
   background: #2a3036;
   height: 100%;
   display: -ms-grid;
   display: grid;
-  margin: 0;
-  border: 1px solid white;
+  -ms-grid-columns: 5.5rem 1fr;
+      grid-template-columns: 5.5rem 1fr;
 }
 
-header {
-  width: 5.5rem;
-  height: 100vh;
-  background: inherit;
+nav {
+  z-index: 100;
+  /* Hover effects of each icon */
+  /* Pseudo elements - icons*/
+}
+
+nav a {
+  color: inherit;
+  text-decoration: none;
+}
+
+nav ul {
   position: fixed;
-  border: 1px solid white;
+  bottom: 60px;
+  left: 5px;
+  height: 12rem;
+  opacity: 0;
+  pointer-events: none;
+  list-style: none;
+  width: 80px;
+  text-align: center;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
 }
 
+nav ul li {
+  font-family: "Lucida Console", Monaco, monospace;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 0.35em 0;
+}
+
+nav li {
+  color: #566270;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+nav li:nth-of-type(1):hover {
+  color: #FD6C6E;
+}
+
+nav li:nth-of-type(2):hover {
+  color: #ffd23f;
+}
+
+nav li:nth-of-type(3):hover {
+  color: #C8F26E;
+}
+
+nav li:nth-of-type(4):hover {
+  color: #55CCC3;
+}
+
+nav li:hover::after {
+  display: block;
+  font-size: 0.7rem;
+  color: white;
+}
+
+nav li:nth-of-type(1):hover::after {
+  content: 'Home';
+}
+
+nav li:nth-of-type(2):hover::after {
+  content: 'About';
+}
+
+nav li:nth-of-type(3):hover::after {
+  content: 'Work';
+}
+
+nav li:nth-of-type(4):hover::after {
+  content: 'Contact';
+}
+
+/* Default Nav state ends */
+nav.active ul {
+  opacity: 1;
+  pointer-events: initial;
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+/* Draw menu icon */
+.nav-icon {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+  display: inline-block;
+  height: 35px;
+  position: fixed;
+  bottom: 15px;
+  left: 25px;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
+  width: 35px;
+}
+
+.nav-icon span {
+  /* First bar from Icon */
+  position: absolute;
+  top: 15px;
+  left: 5px;
+  background: #566270;
+  display: block;
+  height: 3px;
+  right: 5px;
+  transition: -webkit-transform 0.3s;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.nav-icon span:before, .nav-icon span:after {
+  /* Pseudo elements for other bars*/
+  width: 100%;
+  height: 3px;
+  background: #566270;
+  content: "";
+  display: block;
+  left: 0;
+  position: absolute;
+}
+
+.nav-icon span:before {
+  top: -8px;
+}
+
+.nav-icon span:after {
+  bottom: -8px;
+}
+
+/* End icon creation */
+.active .nav-icon span {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+/* Main container styles */
+#works {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  height: 100%;
+  grid-auto-rows: 15rem;
+}
+
+#works div:nth-of-type(3) {
+  background: #C8F26E;
+}
+
+#works div:nth-of-type(5) {
+  background: #55CCC3;
+}
+
+#works div:nth-of-type(8) {
+  background: #ffd23f;
+}
+
+#works div:nth-of-type(10) {
+  background: #FD6C6E;
+}
+
+/* Main - Works ends */
 #intro {
   font-family: "Lucida Console", Monaco, monospace;
   font-size: 1.2rem;
   color: white;
-  margin: auto;
-}
-
-#intro p {
+  display: -ms-grid;
+  display: grid;
   margin: auto;
 }
 
@@ -84,6 +267,7 @@ header {
 }
 
 #intro pre a {
+  /* Links inside the PRE */
   color: #55CCC3;
   text-decoration: none;
   -webkit-transition: 0.4s color;
@@ -94,154 +278,19 @@ header {
   color: #C24E5A;
 }
 
-nav {
-  z-index: 100;
-}
-
-nav a {
-  color: inherit;
-  text-decoration: none;
-}
-
-nav ul {
-  position: fixed;
-  bottom: 60px;
-  left: 5px;
-  height: 12rem;
-  opacity: 0;
-  pointer-events: none;
-  list-style: none;
-  width: 80px;
-  text-align: center;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
-}
-
-nav ul li {
+/* Main - Intro ends */
+#worksHeading {
   font-family: "Lucida Console", Monaco, monospace;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  padding: 0.35em 0;
-}
-
-nav li {
-  color: #566270;
-  -webkit-transition: color 0.3s;
-  transition: color 0.3s;
-}
-
-nav li:nth-of-type(1):hover {
-  color: hotpink;
-}
-
-nav li:nth-of-type(2):hover {
-  color: gold;
-}
-
-nav li:nth-of-type(3):hover {
-  color: lightskyblue;
-}
-
-nav li:nth-of-type(4):hover {
-  color: rebeccapurple;
-}
-
-nav li:hover::after {
-  display: block;
-  font-size: 0.7rem;
+  font-size: 1.3rem;
   color: white;
-}
-
-nav li:nth-of-type(1):hover::after {
-  content: 'Home';
-}
-
-nav li:nth-of-type(2):hover::after {
-  content: 'About';
-}
-
-nav li:nth-of-type(3):hover::after {
-  content: 'Work';
-}
-
-nav li:nth-of-type(4):hover::after {
-  content: 'Contact';
-}
-
-nav.active ul {
-  opacity: 1;
-  pointer-events: initial;
-  -webkit-transition-delay: 0.2s;
-          transition-delay: 0.2s;
-}
-
-.nav-icon {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  background: transparent;
-  cursor: pointer;
-  display: inline-block;
-  height: 35px;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
   position: fixed;
-  bottom: 15px;
-  left: 25px;
-  -webkit-transition: background 0.3s;
-  transition: background 0.3s;
-  width: 35px;
+  top: 170px;
+  left: -85px;
 }
 
-.nav-icon span {
-  position: absolute;
-  top: 15px;
-  left: 5px;
-  background: #566270;
-  display: block;
-  height: 3px;
-  right: 5px;
-  transition: -webkit-transform 0.3s;
-  -webkit-transition: -webkit-transform 0.3s;
-  transition: transform 0.3s;
-  transition: transform 0.3s, -webkit-transform 0.3s;
-}
-
-.nav-icon span:before, .nav-icon span:after {
-  width: 100%;
-  height: 3px;
-  background: #566270;
-  content: "";
-  display: block;
-  left: 0;
-  position: absolute;
-}
-
-.nav-icon span:before {
-  top: -8px;
-}
-
-.nav-icon span:after {
-  bottom: -8px;
-}
-
-.active .nav-icon span {
-  -webkit-transform: rotate(90deg);
-  transform: rotate(90deg);
-}
-
-/* If Javascript isn't enabled: */
-.no-js pre span:nth-of-type(1), .no-js pre span:nth-of-type(8) {
-  color: #566270;
-}
-
-.no-js pre span:nth-of-type(2) {
-  color: #FD6C6E;
-}
-
-.no-js pre span:nth-of-type(3) {
-  color: #ffd23f;
-}
-
-.no-js pre span:nth-of-type(4), .no-js pre span:nth-of-type(5), .no-js pre span:nth-of-type(6), .no-js pre span:nth-of-type(7) {
-  color: #C8F26E;
+#worksHeading span {
+  color: #55CCC3;
 }
 /*# sourceMappingURL=style.css.map */

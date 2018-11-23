@@ -1,3 +1,28 @@
+/* main menu toggling */
+var nav = document.getElementById('nav');
+var navlinks = nav.getElementsByTagName('a');
+
+function toggleNav() {
+
+  if(nav.classList.contains('active')){
+    nav.classList.remove('active')}
+    else{nav.classList.add('active') }
+
+    // ternary operator example
+    // (nav.classList.contains('active')) ? nav.classList.remove('active') : nav.classList.add('active');
+  }
+
+document.getElementById('nav-icon').addEventListener('click', function(e) {
+    e.preventDefault();
+    toggleNav();
+});
+
+for(var i = 0; i < navlinks.length; i++) {
+    navlinks[i].addEventListener('click', function() {
+      toggleNav();
+  });
+}
+
 /* Code Syntax Highlighting */
   function syntaxHighlights() { 
       var codeArray = document.getElementsByTagName("pre"),  /* create a variable for your code container.
@@ -37,47 +62,26 @@ window.addEventListener("load", syntaxHighlights);
 var noJavascriptEnabled = document.querySelector('HTML');
 noJavascriptEnabled.classList.remove('no-js');
 
+
 /* Re-create typing effect */
-var i = 0;
-var speed = 50;
-
-intro.addEventListener("click", function(e) {
-  e.preventDefault();
-  if (e.target.nodeName == "A") {
-    var syntaxString = e.target.title;
-    function typeWriter() {
-      if (i < syntaxString.length) {
-        newLineCommand.innerHTML += syntaxString.charAt(i);
-        i++;
-        setTimeout(typeWriter, speed);
-      }
-    }
-    typeWriter();
-  }
-});
-
-
-/* main menu toggling */
-var nav = document.getElementById('nav');
-var navlinks = nav.getElementsByTagName('a');
-
-function toggleNav() {
-
-  if(nav.classList.contains('active')){
-    nav.classList.remove('active')}
-    else{nav.classList.add('active') }
-
-    // ternary operator example
-    // (nav.classList.contains('active')) ? nav.classList.remove('active') : nav.classList.add('active');
-  }
-
-document.getElementById('nav-icon').addEventListener('click', function(e) {
+if(document.querySelector('main').id == 'intro'){
+  var i = 0;
+  var speed = 50;
+  
+  intro.addEventListener("click", function(e) {
     e.preventDefault();
-    toggleNav();
-});
-
-for(var i = 0; i < navlinks.length; i++) {
-    navlinks[i].addEventListener('click', function() {
-      toggleNav();
+    if (e.target.nodeName == "A") {
+      var syntaxString = e.target.title;
+      function typeWriter() {
+        if (i < syntaxString.length) {
+          newLineCommand.innerHTML += syntaxString.charAt(i);
+          i++;
+          setTimeout(typeWriter, speed);
+        }
+      }
+      typeWriter();
+    }
   });
 }
+
+
