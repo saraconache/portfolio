@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=KoHo:400,700');
 $colors: ( /* SASS MAP is like an object */
     gray:#566270,
     turquoise: #55CCC3,
@@ -10,6 +11,64 @@ $colors: ( /* SASS MAP is like an object */
 @function color($color-name){ /* Function named color to get information from MAP */
   @return map-get($colors, $color-name)
 }
+
+$xLargeDesktop: 2900px;
+$largeDesktop: 2450px;
+$mediumDesktop: 2000px;
+$smallDesktop: 1700px;
+$mediumLaptop: 1500px;
+$smallLaptop: 1100px;
+$tablet: 800px;
+$mobile: 451px;
+$mobileMax: 450px;
+
+@mixin xLargeDesktop{
+  @media (min-width: #{$xLargeDesktop}){
+    @content;
+  }
+}
+
+@mixin largeDesktop{
+  @media (min-width: #{$largeDesktop}){
+    @content;
+  }
+}
+@mixin mediumDesktop{
+  @media (min-width: #{$mediumDesktop}){
+    @content;
+  }
+}
+@mixin smallDesktop{
+  @media (min-width: #{$smallDesktop}){
+    @content;
+  }
+}
+@mixin mediumLaptop{
+  @media (min-width: #{$mediumLaptop}){
+    @content;
+  }
+}
+@mixin smallLaptop{
+  @media (min-width: #{$smallLaptop}){
+    @content;
+  }
+}
+@mixin tablet{
+  @media (min-width: #{$tablet}){
+    @content;
+  }
+}
+@mixin mobile{
+  @media (min-width: #{$mobile}){
+    @content;
+  }
+}
+@mixin mobileMax{
+  @media (max-width: #{$mobileMax}){
+    @content;
+  }
+}
+
 *, *::after, *::before{
   box-sizing: border-box;
   padding: 0;
@@ -19,6 +78,16 @@ $colors: ( /* SASS MAP is like an object */
   -webkit-font-smoothing: antialiased;
 }
 /* If Javascript isn't enabled: */
+.disappear{
+  display:none;
+}
+#noJSnote{
+  color:color(green);
+  padding: 2rem;
+  margin: 2rem auto;
+  border: 1px dashed color(green);
+  width: 50%;
+}
 .no-js{
   pre{
     span:nth-of-type(1), span:nth-of-type(8){
@@ -42,19 +111,23 @@ $colors: ( /* SASS MAP is like an object */
 .introHeight{
   height: 100%;
 }
+header{
+  background: darken(color(gray), 20%);
+}
 body{
+  font-family: 'KoHo', Arial, Helvetica, sans-serif;
   background: darken(color(gray), 20%);
   height: 100%;
   display: grid;
-  // border: 1px solid white;
   grid-template-columns: 5.5rem 1fr;
+  @include mobileMax{
+    grid-template-columns: 1fr;
+    grid-template-rows: 4rem 1fr;
+  }
+  @include xLargeDesktop{
+    grid-template-columns: 12rem 1fr;
+  }
 }
-// header{
-//   border: 1px solid gold;
-// }
-// main{
-//   border: 1px solid red;
-// }
 nav {
   z-index: 100;
   a {
@@ -65,19 +138,60 @@ nav {
     position: fixed;
     bottom: 60px;
     left: 5px;
-    height: 12rem;
+    height: 16rem;
     opacity: 0;
     pointer-events: none;
     list-style: none;
-    width: 80px;
     text-align: center;
     transition: opacity 0.3s;
+    @include mobileMax{
+      top: 47px;
+      left: unset;
+      right: 60px;
+      height: 2rem;
+      width: 14rem;
+      display: flex;
+      justify-content: space-around;
+    }
+    @include mobile{
+      height: 9rem;
+      left: 0px;
+      width: 85px;
+    }
+    @include smallLaptop{
+      height: 11rem;
+    }
+    @include mediumLaptop{
+      width: 95px;
+    }
+    @include smallDesktop{
+      height: 15rem;
+    }
+    @include xLargeDesktop{
+      height: 20rem;
+      width: 200px;
+      bottom: 170px;
+    }
       li {
         font-family: "Lucida Console", Monaco, monospace;
         text-transform: uppercase;
         letter-spacing: 2px;
         padding: 0.35em 0;
       }
+  }
+  .material-icons{
+    font-size: 18px; 
+
+    @include smallLaptop{
+      font-size: 24px;
+    }
+    @include smallDesktop{
+      font-size: 36px;
+    }
+    @include xLargeDesktop{
+      font-size:48px;
+    }
+
   }
   /* Hover effects of each icon */
   li{
@@ -98,8 +212,19 @@ nav {
   }
   li:hover::after{
     display: block;
-    font-size: 0.7rem;
     color: white;
+    @include mobileMax{
+      font-size:0.7rem;
+    }
+    @include mobile{
+      font-size: 0.7rem;
+    }
+    @include smallDesktop{
+      font-size: 1rem;
+    }
+    @include xLargeDesktop{
+      font-size: 1.7rem;
+    }
   }
   /* Pseudo elements - icons*/
  li:nth-of-type(1):hover::after{
@@ -114,6 +239,9 @@ nav {
   li:nth-of-type(4):hover::after{
     content:'Contact';
   }
+
+
+
 } /* Default Nav state ends */
 
 nav.active ul {
@@ -131,11 +259,32 @@ nav.active ul {
   cursor: pointer;
   display: inline-block;
   height: 35px;
+  width: 35px;
   position: fixed;
   bottom: 15px;
   left: 25px;
   transition: background 0.3s;
-  width: 35px;
+
+  @include mobileMax{
+    top: 45px;
+    left: unset;
+    right: 20px;
+  }
+  @include mediumLaptop{
+  height: 40px;
+  width: 40px;
+  }
+  @include smallDesktop{
+  height: 50px;
+  width: 50px;
+  }
+  @include xLargeDesktop{
+    height: 90px;
+    width: 90px;
+    left: 45px;
+    bottom: 30px;
+  }
+
   span { /* First bar from Icon */
     position: absolute;
     top: 15px;
@@ -147,6 +296,14 @@ nav.active ul {
     transition: -webkit-transform 0.3s;
     transition: transform 0.3s;
     transition: transform 0.3s, -webkit-transform 0.3s;
+
+    @include mediumLaptop{
+      height: 5px;
+    }
+    @include xLargeDesktop{
+      height: 10px;
+      left: 15px;
+    }
   }
   span:before, span:after { /* Pseudo elements for other bars*/
     width: 100%;
@@ -156,12 +313,41 @@ nav.active ul {
     display: block;
     left: 0;
     position: absolute;
+
+    @include mediumLaptop{
+    height: 5px;
+    }
+    @include smallDesktop{
+    height: 5px;
+    }
+    @include xLargeDesktop{
+      height: 10px;
+    }
+
   }
   span:before {
     top: -8px;
+    @include mediumLaptop{
+      top: -10px;
+    }
+    @include smallDesktop{
+      top: -14px;
+    }
+    @include xLargeDesktop{
+      top: -20px;
+    }
   }
   span:after {
     bottom: -8px;
+    @include mediumLaptop{
+      bottom: -10px;
+    }
+    @include smallDesktop{
+    bottom: -14px;
+    }
+    @include xLargeDesktop{
+      bottom: -20px;
+    }
   }
 } /* End icon creation */
 
@@ -170,25 +356,46 @@ nav.active ul {
           transform: rotate(90deg);
 }
 
-/* Main container styles */
+/* ----- Main container styles ------ */
 
 
 #works{
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  height: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr)) ;
   grid-auto-rows: 15rem;
-  div:nth-of-type(3){
-    background: color(green);
+  height: 100%;
+
+  @include mobileMax{
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)) ;
+    grid-auto-rows: 11rem;
   }
-  div:nth-of-type(5){
-    background: color(turquoise);
+  @include mobile{
+    grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)) ;
+    grid-auto-rows: 12rem;
   }
-  div:nth-of-type(8){
-    background: color(yellow);
+  @include smallLaptop{
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr)) ;
+    grid-auto-rows: 15rem;
   }
-  div:nth-of-type(10){
-    background: color(lightpink);
+  @include largeDesktop{
+  grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr)) ;
+  grid-auto-rows: 30rem;
+  }
+
+ @include mediumDesktop{
+   grid-template-columns: repeat(auto-fit, minmx(28rem, 1fr)) ;
+   grid-auto-rows: 25rem;
+   }
+    
+  div img{
+    width: 100%;
+    height: 100%;
+    -webkit-filter: grayscale(1);
+    filter: grayscale(1) opacity(0.4);
+    transition: filter 1s;
+  }
+  div img:hover{
+    filter: none;
   }
 } /* Main - Works ends */
 
@@ -204,8 +411,29 @@ nav.active ul {
     white-space: pre-wrap; 
     padding: 10px; 
     line-height: 1.5em; 
-   font-size: 1.2rem;
     font-family: "Lucida Console", Monaco, monospace;
+    @include mobileMax{
+      font-size: 1rem;
+      padding: 30px;
+    }
+    @include tablet{
+      font-size: 1.2rem;
+    }
+    @include smallLaptop{
+      font-size: 1.4rem;
+    }
+    @include mediumLaptop{
+      font-size: 1.8rem;
+    }
+    @include mediumDesktop{
+      font-size: 2.1rem;
+    }
+    @include largeDesktop{
+      font-size: 2.5rem;
+    }
+    @include xLargeDesktop{
+      font-size: 3.2rem;
+    }
    .string {color:color(green);}
    .keywordsJsReg {color:color(lightpink);}
    .specialJsReg {color:#6DE4D1;}
@@ -226,15 +454,696 @@ nav.active ul {
 } /* Main - Intro ends */
 
 
-#worksHeading{  
+
+#about{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'KoHo', Arial, Helvetica, sans-serif;
+  @include mobileMax{
+    height: auto;
+  }
+  @include tablet{
+    height: 100vh;
+  }
+}
+.profilepic{
+  width: 15rem;
+  height: 15rem;
+  -webkit-clip-path: circle(50% at 50% 50%);
+  clip-path: circle(50% at 50% 50%);
+  @include mobileMax{
+    width: 12rem;
+    height: 12rem;
+    margin: 0 auto 2rem;
+  }
+  @include mobile{
+    margin: 0 auto 2rem;
+  }
+  @include tablet{
+    width: 15rem;
+    height: 15rem;
+    margin: 0 3rem;
+  }
+  @include mediumDesktop{
+    width: 20rem;
+    height: 20rem;
+  }
+  @include xLargeDesktop{
+    height: 35rem;
+    width: 35rem;
+    margin: 0 5rem;
+  }
+}
+#about section{
+  max-width: 130rem;
+  @include mobileMax{
+    flex-direction: column;
+    width: 100%;
+    padding: 2rem;
+  }
+  @include mobile{
+    flex-direction: column;
+    width: 100%;
+    padding: 2rem;
+  }
+  @include tablet{
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+  }
+  article{
+    color: white;
+    @include mobileMax{
+      font-size: 1rem;
+    }
+    @include mobile{
+      font-size: 1rem;
+    }
+    @include tablet{
+      font-size: 1.1rem;
+    }
+    @include mediumLaptop{
+      font-size: 1.4rem;
+    }
+    @include largeDesktop{
+      font-size: 1.8rem;
+    }
+    @include xLargeDesktop{
+      font-size: 3rem;
+    }
+    h2{
+      font-family: "Lucida Console", Monaco, monospace;
+      margin-bottom: 2rem;
+    }
+    span{
+      color: color(lightpink);
+    }
+  }
+}
+/* Main - About ends */
+
+#contact{
+height: 100vh;
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+grid-template-rows: 15rem 1fr ;
+@include mobileMax{
+  grid-template-rows: 10rem 1fr ;
+  grid-template-columns: 1fr;
+}
+@include mobile{
+  grid-template-columns: 1fr;
+}
+@include smallDesktop{
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 25rem 1fr ;
+}
+@include largeDesktop{
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 35rem 1fr ;
+}
+@include xLargeDesktop{
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 45rem 1fr ;
+}
+article{
+color: white;
+margin-right: 2rem;
+grid-column: 3/4;
+grid-row: 2/3;
+text-align: right;
+@include mobileMax{
+  margin: 2rem 2rem;
+  grid-column: 1/2;
+  grid-row: 1/2;}
+  @include mobile{
+    margin: 2rem 2rem;
+    grid-column: 1/2;
+    grid-row: 1/2;}
+  @include tablet{
+    margin: 2rem 5rem;
+  }
+@include smallLaptop{
+  margin-right: 2rem;
+grid-column: 3/4;
+grid-row: 2/3;}
+}
+@include xLargeDesktop{
+  padding-right: 5rem;
+  font-size: 2.2rem;
+}
+  form > div:nth-of-type(2){width: 100%;}
+  form{
+    margin-left:5rem;
+    grid-column: 1/3;
+    grid-row: 2/3;
+    @include mobileMax{
+      grid-column: 1/2;
+      grid-row: 2/3;
+      margin:0.7rem;
+    }
+    @include mobile{
+      margin:0.7rem;
+    }
+    @include tablet{
+      margin:2rem 5rem;
+    }
+    @include smallLaptop{
+      margin-left:5rem;
+    grid-column: 1/3;
+    grid-row: 2/3;
+    }
+    .personalInfo{
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      @include mobileMax{
+        flex-direction: column;
+      }
+    }
+    .group{
+      width: 49%;
+      @include mobileMax{
+        width: 100%;
+      }
+    }
+    label {
+      position: relative;
+      top: -35px;
+      left: 15px;
+      color:  #ffd23f;
+      font: 400 1.2rem 'KoHo';
+      cursor: text;
+      transition: .25s ease;
+      @include mediumDesktop{
+        top: -55px;
+        font-size: 2.2rem;
+        }
+      @include xLargeDesktop{
+        top: -68px;
+      }
+    }
+    input:focus ~ label, input:valid ~ label {
+      top: -52px;
+      left: 15px;
+      font: 700 1rem 'KoHo';
+      color: #ffd23f;
+      background: #2A3036;
+      padding: 0 0.5rem;
+      @include mediumDesktop{
+        top: -75px;
+        font: 700 1.5rem 'KoHo';
+        }
+        @include xLargeDesktop{
+        top: -105px;
+        font: 700 2rem 'KoHo';
+        }
+    }
+    
+    input {
+      font-family: 'KoHo', Arial, Helvetica, sans-serif;
+      display: block;
+      width: 100%;
+      border: 2px solid #566270;
+      border-radius: 10px;
+      color: #fff;
+      background: transparent;
+      padding: 0.5rem;
+      font-size: 1rem;
+      transition: .3s ease;
+      @include mediumDesktop{
+      font-size: 2rem;
+      }
+      @include xLargeDesktop{
+        font-size: 3rem;
+      }
+    }
+    input:focus {
+      outline: none;
+    }
+    input:invalid {
+      box-shadow: none;
+    }
+    textarea{
+      font-family: 'KoHo', Arial, Helvetica, sans-serif;
+      color: #fff;
+      background: transparent;
+      border: 2px solid #566270;
+      border-radius: 8px;
+      padding: 1rem;
+      width: 100%;
+      height: 12rem;
+      transition: .3s ease;
+      @include mediumDesktop{
+        font-size: 2rem;
+      }
+      @include xLargeDesktop{
+        height: 30rem;
+        font-size: 3rem;
+      }
+    }
+    textarea:invalid {
+      box-shadow: none;
+    }
+    .groupTextarea{
+      width: 100%;
+      height: auto;
+    }
+    .groupTextarea label{
+      position: relative;
+      top: -180px;
+      left: 15px;
+      @include xLargeDesktop{
+        top: -460px;
+      }
+    }
+    textarea:focus ~ label, textarea:valid ~ label {
+      top: -200px;
+      left: 15px;
+      font: 700 1rem 'KoHo';
+      color: #ffd23f;
+      background: #2A3036;
+      padding: 0 0.5rem;
+      @include mediumDesktop{
+        top: -210px;
+        font: 700 1.5rem 'KoHo';
+      }
+      @include xLargeDesktop{
+        top: -510px;
+        font: 700 2rem 'KoHo';
+      }
+    }
+  
+    #contactButton{
+      background: #22272B;
+      color: #566270;
+      padding: 1rem;
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: .3s ease;
+      @include mediumDesktop{
+        font-size: 1.5rem;
+        padding: 1.1rem;
+      }
+      @include xLargeDesktop{
+        font-size: 2rem;
+        padding: 1.7rem;
+      }
+    }
+    #contactButton:hover{
+      background: #ffd23f;
+      cursor: pointer;
+      color: #22272B;
+    }
+  } 
+}
+/* MAIN - Contact ends*/
+
+
+#project{
+  display: flex;
+  flex-direction: column;
+}
+#preview{
+  height: auto;
+  width: 100%;
+  display: flex;
+justify-content: flex-end;
+@include mobileMax{
+  flex-direction: column;
+}
+@include mobile{
+flex-direction: column;
+}
+@include tablet{
+  flex-direction: row;
+}
+  article{
+    width: 50%;
+    color: white;
+    font-size: 1.1rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    transition: opacity 0.4s;
+    @include mobileMax{
+      font-size: 1rem;
+      width: 100%;
+    }
+    @include mobile{
+      font-size: 1rem;
+      width: 100%;
+    }
+    @include tablet{
+      width: 50%;
+      font-size: 1.1rem;
+    }
+    @include smallDesktop{
+      font-size: 1.3rem;
+      padding: 4rem;
+    }
+    @include xLargeDesktop{
+      font-size: 2.5rem;
+      padding: 8rem;
+    }
+    a{
+      text-decoration: none;
+      color: color(turquoise);
+    }
+    h2{
+      font-family: "Lucida Console", Monaco, monospace;
+      margin-bottom: 1rem;
+    }
+  }
+  .fixedCSS{
+    position: fixed;
+    left: 90px;
+    height: 100vh;
+    width: 45%;
+    @include smallDesktop{
+      padding: 4rem;}
+  }
+}
+
+#screenshot{
+  width: 50%;
+  top: 0;
+  right: 0;
+  @include mobileMax{
+    width: 100%;
+  }
+  @include mobile{
+    width: 100%;
+  }
+  @include tablet{
+    width: 50%;
+  }
+  img{
+    width: 100%;
+  }
+}
+#technologies{
+  background: #1E2226;
+  padding: 3rem;
+  color: white;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  @include mobileMax{
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  @include mobile{
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  @include tablet{
+    flex-direction: row;
+  }
+  @include xLargeDesktop{
+    padding: 6rem;
+  }
+  div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    @include mobileMax{
+      margin-top: 2rem;
+    }
+    @include mobile{
+      margin-top: 2rem;
+    }
+    @include tablet{
+      margin: 0;
+    }
+  }
+img{
+  width: 4rem;
+  @include mobileMax{
+    margin: 0rem;
+  }
+  @include mobile{
+    margin: 0.5rem;
+  }
+  @include tablet{
+    margin: 0;
+  }
+  @include xLargeDesktop{
+    width: 6rem;
+  }
+}
+  h2{
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  text-align: right;
+  padding-right:2rem;
+  border-right: 1px solid gray;
+  @include mobileMax{
+    text-align: center;
+    border: 0;
+    padding: 0;
+  }
+  @include mobile{
+    text-align: center;
+    border: 0;
+    padding: 0;
+  }
+  @include tablet{
+    text-align: right;
+    padding-right:2rem;
+    border-right: 1px solid gray;
+  }
+  @include xLargeDesktop{
+    font-size: 3rem;
+  }
+    span{
+      font-size: 2rem;
+      display: block;
+      margin-top: -10px;
+      @include xLargeDesktop{
+        font-size: 4rem;
+      }
+    }  
+  }
+
+}
+#dissection{
+  padding: 6rem 5rem;
+  color: white;
+  font-size: 1rem;
+  display: grid;
+  grid-gap: 1.1rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  @include mobileMax{
+    grid-template-columns: 1fr;
+    grid-gap: 0.5rem;
+    padding: 4rem 1.5rem;
+  }
+  @include mobile{
+    grid-template-columns: 1fr;
+    grid-gap: 0.5rem;
+    padding: 4rem 0;
+  }
+  @include tablet{
+    padding: 6rem 5rem;
+    grid-gap: 1.1rem;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  @include smallDesktop{
+    font-size: 1.3rem;
+    padding: 6rem 8rem;
+  }
+  @include xLargeDesktop{
+    font-size: 2.4rem;
+    width: 80%;
+    margin: 0 auto;
+    height: auto;
+      padding: 15rem 5rem;
+  }
+  h2{
+    font-family: "Lucida Console", Monaco, monospace;
+    font-size: 1rem;
+    font-weight: 300;
+    margin: 1rem auto;
+    color: color(gray);
+    @include smallDesktop{
+      font-size: 1.2rem;
+    }
+    @include xLargeDesktop{
+      font-size: 2.6rem;
+    }
+    .htmlTitle{
+      color: color(green);
+    }
+    .cssTitle{
+      color: color(yellow);
+    }
+    .jsTitle{
+      color: color(turquoise);
+    }
+  }
+  #smallPara{
+  grid-column:   1/2;
+  }
+  #codepen{
+    grid-column: 2/4;
+    @include mobileMax{
+      grid-column: 1/2;
+    }
+    @include mobile{
+      grid-column: 1/2;
+    }
+    @include tablet{
+      grid-column: 2/4;
+    }
+  }
+}
+
+#branding{
+  width: 100%;
+  height: 80vh;
+  background: color(turquoise);
+  // background-image: url('../images/particles.png');
+  // background-size: contain;
+}
+
+
+/* ---- Headings ---- */
+.mainHeading{
   font-family: "Lucida Console", Monaco, monospace;
   font-size: 1.3rem;
   color: white;
   transform:rotate(-90deg);
   position: fixed;
+}
+#worksHeading{  
+
   top: 170px;
   left: -85px;
+  @include mobileMax{
+  transform:none;
+  top: 20px;
+  left: unset;
+  right: 20px;
+  font-size: 1rem;
+  }
+  @include tablet{
+    font-size: 1.3rem;
+  }
+  @include mediumDesktop{
+    font-size: 2rem;
+    top: 240px;
+    left: -155px;
+  }
+  @include xLargeDesktop{
+    font-size: 3rem;
+    left: -210px;
+    top: 360px;
+  }
   span{
     color: color(turquoise);
   }
 }
+
+#aboutHeading{  
+  top: 140px;
+  left: -60px;
+  @include mobileMax{
+  transform:none;
+  top: 20px;
+  left: unset;
+  right: 20px;
+  font-size: 1rem;
+  }
+  @include tablet{
+    font-size: 1.3rem;
+  }
+  @include mediumDesktop{
+    font-size: 2rem;
+    left: -125px;
+    top: 200px;
+  }
+  @include xLargeDesktop{
+    font-size: 3rem;
+    left: -145px;
+    top: 300px;
+  }
+  span{
+    color: color(lightpink);
+  }
+}
+
+#contactHeading{  
+  top: 160px;
+  left: -70px;
+  @include mobileMax{
+  transform:none;
+  top: 20px;
+  left: unset;
+  right: 20px;
+  font-size: 1rem;
+  }
+  @include tablet{
+    font-size: 1.3rem;
+  }
+  @include mediumDesktop{
+    font-size: 2rem;
+    left: -125px;
+    top: 200px;
+  }
+  @include xLargeDesktop{
+    font-size: 3rem;
+    left: -180px;
+    top: 350px;
+  }
+  span{
+    color: color(yellow);
+  }
+}
+
+#webHeading{  
+  top: 200px;
+  left: -120px;
+  @include mobileMax{
+  transform:none;
+  top: 20px;
+  left: unset;
+  right: 20px;
+  font-size: 1rem;
+  }
+  @include tablet{
+    font-size: 1.3rem;
+  }
+  @include mediumDesktop{
+    font-size: 2rem;
+    left: -125px;
+    top: 200px;
+  }
+  @include xLargeDesktop{
+    font-size: 3rem;
+    left: -250px;
+    top: 400px;
+  }
+  span{
+    color: color(green);
+  }
+}
+
+.green{
+ background: color(green);
+}
+.blue{
+  background: color(turquoise);
+}
+.yellow{
+  background: color(yellow);
+}
+.pink{
+  background: color(lightpink);
+}
+.empties{
+  background-image: url("back-01.png");
+}
+
