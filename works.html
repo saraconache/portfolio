@@ -5,8 +5,8 @@
         <title>Works | Sarah V. Gomez Portfolio</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/workscatalogue.css">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  
       </head>
     <body>
  <header>
@@ -21,74 +21,23 @@
                     </ul>
             </nav>
 </header>
-        <main id="works">  
-            <div></div>
-            <div><a href="project1.html"><img src="images/prev-03.png" alt="projectOne"></a></div>
-            <div></div>
-            <div><a href="#"><img src="images/prev-02.png" alt="projectOne"></a></div>
-            <div></div>
-            <div></div>
-            <div><a href="#"><img src="images/prev-02.png" alt="projectOne"></a></div>
-            <div></div>
-            <div><a href="#"><img src="images/prev-02.png" alt="projectOne"></a></div>
-            <div></div>
-            <div></div>
-            <div><a href="#"><img src="images/prev-02.png" alt="projectOne"></a></div>
-            <div></div>
-            <div><a href="#"><img src="images/prev-02.png" alt="projectOne"></a></div>
-            <div></div>
-            <div></div>
-            <div><a href="#"><img src="images/prev-02.png" alt="projectOne"></a></div>
-            <div></div>
-            <div><a href="#"><img src="images/prev-02.png" alt="projectOne"></a></div>
-            <div></div>
-            
-            <div></div>
-            <div><a href="#"><img src="images/prev-02.png" alt="projectOne"></a></div>
-            <div></div>
-            <div><a href="#"><img src="images/prev-02.png" alt="projectOne"></a></div>
-            <div></div>
-            <div></div>
-            <div><a href="#"><img src="images/prev-02.png" alt="projectOne"></a></div>
-            <div></div>
-            <div><a href="#"><img src="images/prev-02.png" alt="projectOne"></a></div>
-            <div></div>
-            <div></div>
-            <div><a href="#"><img src="images/prev-02.png" alt="projectOne"></a></div>
-            <div></div>
-            <div><a href="#"><img src="images/prev-02.png" alt="projectOne"></a></div>
-            <div></div>
-            <div></div>
-            <div><a href="#"><img src="images/prev-02.png" alt="projectOne"></a></div>
-            <div></div>
-            <div><a href="#"><img src="images/prev-02.png" alt="projectOne"></a></div>
-            <div></div>
+            <main id="works">
+                    <section id="groupOne" class="patternA">
+                      <div class="project workA1"><img src="images/prev-01.png"></div>
+                      <div class="project workA2"><img src="images/prev-02.png"></div>
+                      <div class="project workA3"><img src="images/prev-03.png"></div>
+                      <div class="project workA4"><img src="images/prev-04.png"></div>
+                      <div class="project workA5"><img src="images/prev-01.png"></div>
+                    </section>
+                    
+                    <section id="groupTwo" class="patternB">
+                        <div class="project workB1"><img src="images/prev-02.png"></div>
+                        <div class="project workB2"><img src="images/prev-03.png"></div>
+                        <div class="project workB3"><img src="images/prev-04.png"></div> 
+                    </section>
             </main>
 <script async defer src="js/main.js"></script> 
-<script>
+<script async defer src="js/gridwork.js"></script> 
 
-
-
-/* Portfolio pattern */
-
-var squares = document.querySelectorAll('#works div');
-for(i=2; i < squares.length ; i+=10){
-  squares[i].classList.add('green');
-}
-
-for(i=4; i < squares.length ; i+=10){
-  squares[i].classList.add('blue');
-}
-
-for(i=7; i < squares.length ; i+=10){
-  squares[i].classList.add('yellow');
-}
-
-for(i=9; i < squares.length ; i+=10){
-  squares[i].classList.add('pink');
-};
-
-
-</script>
     </body>
 </html>

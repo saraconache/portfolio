@@ -409,55 +409,6 @@ nav.active ul {
 }
 
 /* ----- Main container styles ------ */
-#works {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (minmax(18rem, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
-  grid-auto-rows: 15rem;
-  height: 100%;
-}
-
-@media (max-width: 450px) {
-  #works {
-    -ms-grid-columns: (minmax(10rem, 1fr))[auto-fit];
-        grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
-    grid-auto-rows: 11rem;
-  }
-}
-
-@media (min-width: 451px) {
-  #works {
-    -ms-grid-columns: (minmax(13rem, 1fr))[auto-fit];
-        grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
-    grid-auto-rows: 12rem;
-  }
-}
-
-@media (min-width: 1100px) {
-  #works {
-    -ms-grid-columns: (minmax(18rem, 1fr))[auto-fit];
-        grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
-    grid-auto-rows: 15rem;
-  }
-}
-
-@media (min-width: 2450px) {
-  #works {
-    -ms-grid-columns: (minmax(35rem, 1fr))[auto-fit];
-        grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
-    grid-auto-rows: 30rem;
-  }
-}
-
-@media (min-width: 2000px) {
-  #works {
-    -ms-grid-columns: (minmx(28rem, 1fr))[auto-fit];
-        grid-template-columns: repeat(auto-fit, minmx(28rem, 1fr));
-    grid-auto-rows: 25rem;
-  }
-}
-
 #works div img {
   width: 100%;
   height: 100%;
@@ -1331,6 +1282,7 @@ nav.active ul {
       flex-wrap: wrap;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  width: 70%;
 }
 
 @media (max-width: 450px) {

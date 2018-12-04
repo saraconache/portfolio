@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html class="no-js autoHeight" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Works | Sarah V. Gomez Portfolio</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/style.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+   <style>
+#works div{
+  /* border: 1px solid white; */
+}
+
+
+.container {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+
+  grid-template-areas:
+    "empty work2 colorB work4"
+    "colorB empty work3 colorB"
+    "work1 colorB empty work4"
+    "colorB work2 colorB empty"
+    "work1 colorB work3 colorB"
+}
+.empty{
+    grid-area: X;
+}
+.work1{
+    grid-area: work1;
+}
+.work2{
+    grid-area: work2;
+}
+.work3{
+    grid-area: work3;
+}
+.work4{
+    grid-area: work4;
+}
+.color{
+    grid-area: colorB;
+}
+.green{
+    background: green;
+}
+.pink{
+    background: pink;
+}
+.blue{
+    background: lightblue;
+}
+.yellow{
+    background: gold;
+}
+   </style>
+      </head>
+    <body>
+ <header>
+     <h1 id="worksHeading" class="mainHeading"><span>sarahvgomez</span>.portfolio</h1>
+            <nav id="nav">
+                    <button class="nav-icon" id="nav-icon"><span></span></button>
+                    <ul>
+                      <li><a href="index.html"><i class="material-icons">home</i></a></li>
+                      <li><a href="about.html"><i class="material-icons">person</i></a></li>
+                      <li><a href="works.html"><i class="material-icons">work</i></a></li>
+                      <li><a href="contact.html"><i class="material-icons">email</i></a></li>
+                    </ul>
+            </nav>
+</header>
+        <main id="works">  
+            <div class="empty"></div>
+            <div class="color green"></div>
+            <div class="color blue"></div>
+            <div class="color pink"></div>
+            <div class="color yellow"></div>
+            <div class="work1"><a href="#"><img src="images/prev-01.png" alt="projectOne"></a></div>
+            <div class="work2"><a href="#"><img src="images/prev-02.png" alt="projectOne"></a></div>
+            <div class="work3"><a href="#"><img src="images/prev-03.png" alt="projectOne"></a></div>
+            <div class="work4"><a href="#"><img src="images/prev-04.png" alt="projectOne"></a></div>
+            <div class="work5"><a href="#"><img src="images/prev-01.png" alt="projectOne"></a></div>
+            </main>
+<script async defer src="js/main.js"></script> 
+<script>
+
+
+
+
+
+  
+
+
+// var colStart = 3,
+// colEnd = 4,
+// rowStart = 1,
+// rowEnd = 2;
+
+// var newDiv = document.createElement("div");
+// works.appendChild(newDiv);
+// newDiv.style.gridColumn = colStart+"/"+colEnd;
+// newDiv.style.gridRow = rowStart+"/"+rowEnd;
+// newDiv.style.background = "green";
+
+
+</script>
+    </body>
+</html>

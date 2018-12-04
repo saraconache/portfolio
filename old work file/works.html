@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html class="no-js autoHeight" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Works | Sarah V. Gomez Portfolio</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/style.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  
+      </head>
+    <body>
+ <header>
+     <h1 id="worksHeading" class="mainHeading"><span>sarahvgomez</span>.portfolio</h1>
+            <nav id="nav">
+                    <button class="nav-icon" id="nav-icon"><span></span></button>
+                    <ul>
+                      <li><a href="index.html"><i class="material-icons">home</i></a></li>
+                      <li><a href="about.html"><i class="material-icons">person</i></a></li>
+                      <li><a href="works.html"><i class="material-icons">work</i></a></li>
+                      <li><a href="contact.html"><i class="material-icons">email</i></a></li>
+                    </ul>
+            </nav>
+</header>
+        <main id="works">  
+            <div></div>
+            <div><a href="project1.html"><img src="images/prev-03.png" alt="projectOne"></a></div>
+            <div></div>
+            <div><a href="#"><img src="images/prev-02.png" alt="projectOne"></a></div>
+            <div></div>
+            <div></div>
+            <div><a href="#"><img src="images/prev-02.png" alt="projectOne"></a></div>
+            <div></div>
+            <div><a href="#"><img src="images/prev-02.png" alt="projectOne"></a></div>
+            <div></div>
+            <div></div>
+            <div><a href="#"><img src="images/prev-02.png" alt="projectOne"></a></div>
+            <div></div>
+            <div><a href="#"><img src="images/prev-02.png" alt="projectOne"></a></div>
+            <div></div>
+            <div></div>
+            <div><a href="#"><img src="images/prev-02.png" alt="projectOne"></a></div>
+            <div></div>
+            <div><a href="#"><img src="images/prev-02.png" alt="projectOne"></a></div>
+            <div></div>
+            
+            </main>
+<script async defer src="js/main.js"></script> 
+<script>
+
+/* Portfolio pattern */
+
+var squares = document.querySelectorAll('#works div');
+for(i=2; i < squares.length ; i+=10){
+  squares[i].classList.add('green');
+}
+
+for(i=4; i < squares.length ; i+=10){
+  squares[i].classList.add('blue');
+}
+
+for(i=7; i < squares.length ; i+=10){
+  squares[i].classList.add('yellow');
+}
+
+for(i=9; i < squares.length ; i+=10){
+  squares[i].classList.add('pink');
+};
+
+
+</script>
+    </body>
+</html>
