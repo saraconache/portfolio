@@ -92,7 +92,7 @@ $mobileMax: 450px;
   }
   @include tablet{
     right: 30px;
-    top: 35rem;
+    top: 10rem;
     opacity: 0.7;
   }
   @include smallLaptop{
@@ -135,6 +135,11 @@ $mobileMax: 450px;
     top: 60rem;
     opacity: 0.7;
   }
+  @include tablet{
+    right: 30px;
+    top: 35rem;
+    opacity: 0.7;
+  }
   @include smallLaptop{
     top: 600px;
     right: 90px;
@@ -173,6 +178,11 @@ $mobileMax: 450px;
   @include mobile{
     right: 30px;
     top: 90rem;
+    opacity: 0.7;
+  }
+  @include tablet{
+    right: 30px;
+    top: 65rem;
     opacity: 0.7;
   }
   @include smallLaptop{

@@ -33,7 +33,7 @@
 @media (min-width: 800px) {
   #bubbleOne_p1 {
     right: 30px;
-    top: 35rem;
+    top: 10rem;
     opacity: 0.7;
   }
 }
@@ -95,6 +95,14 @@
   }
 }
 
+@media (min-width: 800px) {
+  #bubbleTwo_p1 {
+    right: 30px;
+    top: 35rem;
+    opacity: 0.7;
+  }
+}
+
 @media (min-width: 1100px) {
   #bubbleTwo_p1 {
     top: 600px;
@@ -148,6 +156,14 @@
   #bubbleThree_p1 {
     right: 30px;
     top: 90rem;
+    opacity: 0.7;
+  }
+}
+
+@media (min-width: 800px) {
+  #bubbleThree_p1 {
+    right: 30px;
+    top: 65rem;
     opacity: 0.7;
   }
 }

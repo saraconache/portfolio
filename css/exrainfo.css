@@ -1,0 +1,26 @@
+//   display: grid;
+//   grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr)) ;
+//   grid-auto-rows: 15rem;
+//   height: 100%;
+
+//   @include mobileMax{
+//     grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)) ;
+//     grid-auto-rows: 11rem;
+//   }
+//   @include mobile{
+//     grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)) ;
+//     grid-auto-rows: 12rem;
+//   }
+//   @include smallLaptop{
+//     grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr)) ;
+//     grid-auto-rows: 15rem;
+//   }
+//   @include largeDesktop{
+//   grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr)) ;
+//   grid-auto-rows: 30rem;
+//   }
+
+//  @include mediumDesktop{
+//    grid-template-columns: repeat(auto-fit, minmx(28rem, 1fr)) ;
+//    grid-auto-rows: 25rem;
+//    }

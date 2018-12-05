@@ -10,6 +10,62 @@ $colors: ( /* SASS MAP is like an object */
     @return map-get($colors, $color-name)
   }
 
+  $xLargeDesktop: 2900px;
+  $largeDesktop: 2450px;
+  $mediumDesktop: 2000px;
+  $smallDesktop: 1700px;
+  $mediumLaptop: 1500px;
+  $smallLaptop: 1100px;
+  $tablet: 800px;
+  $mobile: 451px;
+  $mobileMax: 450px;
+  
+  @mixin xLargeDesktop{
+    @media (min-width: #{$xLargeDesktop}){
+      @content;
+    }
+  }
+  
+  @mixin largeDesktop{
+    @media (min-width: #{$largeDesktop}){
+      @content;
+    }
+  }
+  @mixin mediumDesktop{
+    @media (min-width: #{$mediumDesktop}){
+      @content;
+    }
+  }
+  @mixin smallDesktop{
+    @media (min-width: #{$smallDesktop}){
+      @content;
+    }
+  }
+  @mixin mediumLaptop{
+    @media (min-width: #{$mediumLaptop}){
+      @content;
+    }
+  }
+  @mixin smallLaptop{
+    @media (min-width: #{$smallLaptop}){
+      @content;
+    }
+  }
+  @mixin tablet{
+    @media (min-width: #{$tablet}){
+      @content;
+    }
+  }
+  @mixin mobile{
+    @media (min-width: #{$mobile}){
+      @content;
+    }
+  }
+  @mixin mobileMax{
+    @media (max-width: #{$mobileMax}){
+      @content;
+    }
+  }
 
 .project{
   overflow: hidden;
@@ -19,7 +75,21 @@ $colors: ( /* SASS MAP is like an object */
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-auto-rows: 15rem;
-
+  @include mobileMax{
+    grid-auto-rows: 10rem;
+  }
+  @include smallDesktop{
+    grid-auto-rows:20rem;
+  }
+  @include mediumDesktop{
+    grid-auto-rows:24rem;
+  }
+  @include largeDesktop{
+    grid-auto-rows: 33rem;
+  }
+  @include xLargeDesktop{
+    grid-auto-rows: 35rem;
+  }
   div:nth-child(2){
     background: color(green);
   }
@@ -60,7 +130,21 @@ $colors: ( /* SASS MAP is like an object */
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-auto-rows: 15rem;
-
+  @include mobileMax{
+    grid-auto-rows: 10rem;
+  }
+  @include smallDesktop{
+    grid-auto-rows:20rem;
+  }
+  @include mediumDesktop{
+    grid-auto-rows:24rem;
+  }
+  @include largeDesktop{
+    grid-auto-rows: 33rem;
+  }
+  @include xLargeDesktop{
+    grid-auto-rows: 35rem;
+  }
   div:nth-child(1){
     background: color(green);
   }
