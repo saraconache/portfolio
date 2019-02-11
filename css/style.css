@@ -1364,6 +1364,11 @@ nav.active ul {
   width: 100%;
 }
 
+#screenshot video {
+  height: 100vh;
+  float: right;
+}
+
 #technologies {
   background: #1E2226;
   padding: 3rem;

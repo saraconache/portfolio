@@ -893,6 +893,10 @@ flex-direction: column;
   img{
     width: 100%;
   }
+  video{
+    height: 100vh;
+    float: right;
+  }
 }
 #technologies{
   background: #1E2226;
