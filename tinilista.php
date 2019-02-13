@@ -24,14 +24,11 @@
             <section id="preview">
                 <article id="fixed" class="fixedCSS">  
                         <h2>tinilista App</h2>
-Personal project exploring the concept of hybrid apps (applications created with web technologies - html, css, and js - later compiled into functioning mobile apps). This project also explores the usage web storage API localStorage() to store and retrieve data stored temporarily on the browser; making this a flexible and tiny list app (tinilista) where you can store small to dos and safe for later!</p>
+Personal project <a href="https://codepen.io/saraconache/pen/gqjbJa">exploring</a> the concept of hybrid apps (applications created with web technologies - html, css, and js - later compiled into functioning mobile apps). This project also explores the usage web storage API localStorage() to store and retrieve data stored temporarily on the browser; making this a flexible and tiny list app (tinilista) where you can store small to dos and safe for later!</p>
 
     </article>
     <div id="screenshot">
-    <video poster="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/polina.jpg" id="bgvid" playsinline autoplay muted>
-    <source src="images/projects/tinilista/tinilista.webm" type="video/webm">
-    <source src="images/projects/tinilista/tinilista.mp4" type="video/mp4">
-    </video>
+        <img src="images/projects/tinilista/tinilistamockup-01.jpg" alt="PeachnTeal website design mockup">
   </div>
     </section>
     <section id="technologies">
@@ -52,19 +49,12 @@ Personal project exploring the concept of hybrid apps (applications created with
      
         </div>
         <div id="codepen">
-          <pre>
-              /* add key and value to local storage */
-              localStorage.setItem('key', 'value'); 
 
-              /* retrieve a value by the key */
-              localStorage.getItem('key'); 
+            <p class="codepen" data-height="562" data-theme-id="dark" data-default-tab="css,result" data-user="saraconache" data-slug-hash="gqjbJa" data-pen-title="To-do list">See the Pen <a href="https://codepen.io/saraconache/pen/gqjbJa/">
+                To-do list</a> by saraconache (<a href="https://codepen.io/saraconache">@saraconache</a>)
+                on <a href="https://codepen.io">CodePen</a>.</p>
+              <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
-              /* remove an item by the key */
-              localStorage.removeItem('key'); 
-
-              /* clear all storage */
-              localStorage.clear(); 
-          </pre>
         </div>
         <div>
          <h2>&lt;article id='<span class="htmlTitle">basicmarkup</span>'&lt;/article&gt;</h2>
