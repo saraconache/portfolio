@@ -375,8 +375,35 @@ nav.active ul {
    transition: filter 0.4s;
   }
   div img:hover{
-    animation: move 2.5s infinite;
+    // animation: move 2.5s infinite;
     filter:grayscale(0%);
+  }
+  .mynte:hover{
+    background-image: url("mages/projects/previews/mynte-bg.jpg");
+  }
+  .afcc:hover{
+    background-image: url("mages/projects/previews/peach-bg.jpg");
+  }
+  .bigworld:hover{
+    background-image: url("mages/projects/previews/peach-bg.jpg");
+  }
+  .tinilista:hover{
+    background-image: url("mages/projects/previews/peach-bg.jpg");
+  }
+  .vizualizr:hover{
+    background-image: url("mages/projects/previews/peach-bg.jpg");
+  }
+  .winelab:hover{
+    background-image: url("mages/projects/previews/peach-bg.jpg");
+  }
+  .peach:hover{
+    background-image: url("mages/projects/previews/peach-bg.jpg");
+  }
+  .dkki:hover{
+    background-image: url("mages/projects/previews/peach-bg.jpg");
+  }
+  .hydrovac:hover{
+    background-image: url("mages/projects/previews/peach-bg.jpg");
   }
 } /* Main - Works ends */
 

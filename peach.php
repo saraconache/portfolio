@@ -160,6 +160,7 @@ if (viewportWidth > 801) {
   fixed.classList.remove('fixedCSS');
 }
 
+
 /* Speech bubbles! */
 var ypos = window.pageYOffset;
   if(ypos > 5){

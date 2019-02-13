@@ -424,10 +424,44 @@ nav.active ul {
 }
 
 #works div img:hover {
-  -webkit-animation: move 2.5s infinite;
-          animation: move 2.5s infinite;
   -webkit-filter: grayscale(0%);
           filter: grayscale(0%);
+}
+
+#works .mynte:hover {
+  background-image: url("mages/projects/previews/mynte-bg.jpg");
+}
+
+#works .afcc:hover {
+  background-image: url("mages/projects/previews/peach-bg.jpg");
+}
+
+#works .bigworld:hover {
+  background-image: url("mages/projects/previews/peach-bg.jpg");
+}
+
+#works .tinilista:hover {
+  background-image: url("mages/projects/previews/peach-bg.jpg");
+}
+
+#works .vizualizr:hover {
+  background-image: url("mages/projects/previews/peach-bg.jpg");
+}
+
+#works .winelab:hover {
+  background-image: url("mages/projects/previews/peach-bg.jpg");
+}
+
+#works .peach:hover {
+  background-image: url("mages/projects/previews/peach-bg.jpg");
+}
+
+#works .dkki:hover {
+  background-image: url("mages/projects/previews/peach-bg.jpg");
+}
+
+#works .hydrovac:hover {
+  background-image: url("mages/projects/previews/peach-bg.jpg");
 }
 
 /* Main - Works ends */
