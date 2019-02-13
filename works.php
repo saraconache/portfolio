@@ -26,13 +26,15 @@
                       <div class="project workA1"><a href="peach.php"><img src="images/projects/previews/peachntealpreview.jpg" alt="PeachnTeal Project Animated Preview"></a></div>
                       <div class="project workA2"><a href="mynte.php"><img src="images/projects/previews/myntepreview.png" alt="Mynte Project Animated Preview"></a></div>
                       <div class="project workA3"><a href="winelab.php"><img src="images/projects/previews/winepreview.jpg" alt="Wine Lab Project Animated Preview"></a></div>
-                      <div class="project workA4"><a href="bigworld.php"><img src="images/projects/previews/bigworldpreview.png" alt="Big World Project Animated Preview"></a></div>
-                      <div class="project workA5"><a href="jethydrovac.php"><img src="images/projects/previews/hydrovacpreview.jpg" alt="Jet Hydrovac Project Animated Preview"></a></div>
+                      <div class="project workA4"><a href="tinilista.php"><img src="images/projects/previews/tinilistapreview.png" alt="tiniLista Project Animated Preview"></a></div>
+                      <div class="project workA5"><a href="vizualizr.php"><img src="images/projects/previews/vizualizrpreview.jpg" alt="Vizualizr Project Animated Preview"></a></div>
                     </section>
                     
                     <section id="groupTwo" class="patternB">
                         <div class="project workB1"><a href="afcc.php"><img src="images/projects/previews/afccpreview.png" alt="AFCC Project Animated Preview"></a></div>
                         <div class="project workB2"><a href="dkki.php"><img src="images/projects/previews/dkkipreview.jpg" alt="DKKI Project Animated Preview"></a></div>
+                        <div class="project workB3"><a href="bigworld.php"><img src="images/projects/previews/bigworldpreview.png" alt="Big World Project Animated Preview"></a></div>
+                        <div class="project workB4"><a href="jethydrovac.php"><img src="images/projects/previews/hydrovacpreview.jpg" alt="Jet Hydrovac Project Animated Preview"></a></div>
                     </section>
             </main>
 <script async defer src="js/main.js"></script> 
