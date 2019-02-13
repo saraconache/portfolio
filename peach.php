@@ -27,7 +27,6 @@
          font-size: unset;
        } 
        }
-
         </style>
        </head>
     <body>
@@ -140,7 +139,10 @@ This project was designed at every scale, from branding, logo, and color guideli
             </main>
 <script async defer src="js/main.js"></script> 
 <script>
-
+var viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+if(viewportWidth < 700){
+  fixed.classList.remove('fixedCSS');
+}
 /* Project Preview scrolling*/
 window.onscroll = function (event) {
   var headerImgOffset = screenshot.getBoundingClientRect();
@@ -149,7 +151,6 @@ var imgBottom = headerImgOffset.bottom;
 var imgHeight = screenshot.offsetHeight;
 var viewportHeight = document.documentElement.clientHeight;
 
-var viewportWidth = window.innerWidth || document.documentElement.clientWidth;
 if (viewportWidth > 801) {
   if (imgBottom < viewportHeight) { 
           fixed.classList.remove('fixedCSS');
@@ -159,8 +160,6 @@ if (viewportWidth > 801) {
 }else{
   fixed.classList.remove('fixedCSS');
 }
-
-
 /* Speech bubbles! */
 var ypos = window.pageYOffset;
   if(ypos > 5){

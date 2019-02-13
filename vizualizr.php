@@ -6,6 +6,27 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/style.css">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <style>
+        pre{
+          margin: 0 auto;
+          background: #1E2226;
+          padding: 1rem 0;
+        }
+        @media (max-width: 450px) {
+       pre {
+         font-size: 0.7rem;
+       }}
+       @media (min-width: 451px) {
+        pre {
+         font-size: 0.7rem;
+       } 
+       }
+       @media (min-width: 700px) {
+        pre {
+         font-size: unset;
+       } 
+       }
+        </style>
        </head>
     <body>
  <header>
@@ -92,11 +113,10 @@ creating a tool that could be useful for future web development practices. Vizua
             </main>
 <script async defer src="js/main.js"></script> 
 <script>
-
-
-
-
-
+var viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+if(viewportWidth < 700){
+  fixed.classList.remove('fixedCSS');
+}
 /* Project Preview scrolling*/
 window.onscroll = function (event) {
 var headerImgOffset = screenshot.getBoundingClientRect();
