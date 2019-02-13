@@ -59,11 +59,15 @@ creating a tool that could be useful for future web development practices. Vizua
         --sepia: 0%;}
 
         img{
-        border: var(--border) solid var(--basecolor);
+        border: var(--border) 
+        solid var(--basecolor);
         filter: grayscale(var(--grayscale)) 
-        blur(var(--blur)) contrast(var(--contrast)) 
-        hue-rotate(var(--hue-rotate)) saturate(var(--saturate))
-         sepia(var(--sepia)) invert(var(--invert));
+        blur(var(--blur)) 
+        contrast(var(--contrast)) 
+        hue-rotate(var(--hue-rotate)) 
+        saturate(var(--saturate))
+         sepia(var(--sepia)) 
+         invert(var(--invert));
         }
      </pre>
         </div>
