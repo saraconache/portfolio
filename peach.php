@@ -73,7 +73,7 @@ This project was designed at every scale, from branding, logo, and color guideli
     <img src="images/psd-ico.svg" alt="Adobe Photoshop Icon">
     <img src="images/ai-ico.svg" alt="Adobe Illustrator Icon">
     <img src="images/wp-ico.svg" alt="Wordpress Icon">
-    <img src="images/in-ico.svg" alt="Invision Icon">
+    <img src="images/js-ico.svg" alt="JS Icon">
     <img src="images/html-ico.svg" alt="HTML5 Icon">
     <img src="images/css-ico.svg" alt="CSS3 Icon">
     <img src="images/sass-ico.svg" alt="SaSS Icon">
