@@ -415,53 +415,58 @@ nav.active ul {
 
 #works div img {
   height: 100%;
-  -webkit-filter: grayscale(100%);
-          filter: grayscale(100%);
-  -webkit-transition: -webkit-filter 0.4s;
-  transition: -webkit-filter 0.4s;
-  transition: filter 0.4s;
-  transition: filter 0.4s, -webkit-filter 0.4s;
+  width: 100%;
 }
 
 #works div img:hover {
-  -webkit-filter: grayscale(0%);
-          filter: grayscale(0%);
+  opacity: 0;
+  -webkit-transition: 0.3s opacity;
+  transition: 0.3s opacity;
 }
 
 #works .mynte:hover {
-  background-image: url("mages/projects/previews/mynte-bg.jpg");
+  background-image: url("../images/projects/previews/mynte-bg.jpg");
+  background-size: contain;
 }
 
 #works .afcc:hover {
-  background-image: url("mages/projects/previews/afcc-bg.jpg");
+  background-image: url("../images/projects/previews/afcc-bg.jpg");
+  background-size: contain;
 }
 
 #works .bigworld:hover {
-  background-image: url("mages/projects/previews/bigworld-bg.jpg");
+  background-image: url("../images/projects/previews/bigword-bg.jpg");
+  background-size: contain;
 }
 
 #works .tinilista:hover {
-  background-image: url("mages/projects/previews/tinilista-bg.jpg");
+  background-image: url("../images/projects/previews/tinilista-bg.jpg");
+  background-size: contain;
 }
 
 #works .vizualizr:hover {
-  background-image: url("mages/projects/previews/vizualizr-bg.jpg");
+  background-image: url("../images/projects/previews/vizualizr-bg.jpg");
+  background-size: contain;
 }
 
 #works .winelab:hover {
-  background-image: url("mages/projects/previews/winelab-bg.jpg");
+  background-image: url("../images/projects/previews/winelab-bg.jpg");
+  background-size: contain;
 }
 
 #works .peach:hover {
-  background-image: url("mages/projects/previews/peach-bg.jpg");
+  background-image: url("../images/projects/previews/peach-bg.jpg");
+  background-size: contain;
 }
 
 #works .dkki:hover {
-  background-image: url("mages/projects/previews/dkki-bg.jpg");
+  background-image: url("../images/projects/previews/dkki-bg.jpg");
+  background-size: contain;
 }
 
 #works .hydrovac:hover {
-  background-image: url("mages/projects/previews/hydrovac-bg.jpg");
+  background-image: url("../images/projects/previews/jethydrovac-bg.jpg");
+  background-size: contain;
 }
 
 /* Main - Works ends */

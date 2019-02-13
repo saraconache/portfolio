@@ -371,39 +371,50 @@ nav.active ul {
    } 
   div img{
     height: 100%;
-  filter:grayscale(100%);
-   transition: filter 0.4s;
+    width: 100%;
+  // filter:grayscale(100%);
+  //  transition: filter 0.4s;
   }
   div img:hover{
     // animation: move 2.5s infinite;
-    filter:grayscale(0%);
+    opacity: 0;
+transition: 0.3s opacity;
   }
   .mynte:hover{
-    background-image: url("mages/projects/previews/mynte-bg.jpg");
+    background-image: url("../images/projects/previews/mynte-bg.jpg");
+    background-size: contain;
   }
   .afcc:hover{
-    background-image: url("mages/projects/previews/afcc-bg.jpg");
+    background-image: url("../images/projects/previews/afcc-bg.jpg");
+    background-size: contain;
   }
   .bigworld:hover{
-    background-image: url("mages/projects/previews/bigworld-bg.jpg");
+    background-image: url("../images/projects/previews/bigword-bg.jpg");
+    background-size: contain;
   }
   .tinilista:hover{
-    background-image: url("mages/projects/previews/tinilista-bg.jpg");
+    background-image: url("../images/projects/previews/tinilista-bg.jpg");
+    background-size: contain;
   }
   .vizualizr:hover{
-    background-image: url("mages/projects/previews/vizualizr-bg.jpg");
+    background-image: url("../images/projects/previews/vizualizr-bg.jpg");
+    background-size: contain;
   }
   .winelab:hover{
-    background-image: url("mages/projects/previews/winelab-bg.jpg");
+    background-image: url("../images/projects/previews/winelab-bg.jpg");
+    background-size: contain;
   }
   .peach:hover{
-    background-image: url("mages/projects/previews/peach-bg.jpg");
+    background-image: url("../images/projects/previews/peach-bg.jpg");
+    background-size: contain;
   }
   .dkki:hover{
-    background-image: url("mages/projects/previews/dkki-bg.jpg");
+    background-image: url("../images/projects/previews/dkki-bg.jpg");
+    background-size: contain;
   }
   .hydrovac:hover{
-    background-image: url("mages/projects/previews/hydrovac-bg.jpg");
+    background-image: url("../images/projects/previews/jethydrovac-bg.jpg");
+    background-size: contain;
   }
 } /* Main - Works ends */
 
