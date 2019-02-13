@@ -140,6 +140,7 @@ This project was designed at every scale, from branding, logo, and color guideli
             </main>
 <script async defer src="js/main.js"></script> 
 <script>
+
 /* Project Preview scrolling*/
 window.onscroll = function (event) {
   var headerImgOffset = screenshot.getBoundingClientRect();
