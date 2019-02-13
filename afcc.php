@@ -60,6 +60,10 @@
 <script>
 
 /* Project Preview scrolling*/
+var viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+if(viewportWidth < 700){
+  fixed.classList.remove('fixedCSS');
+}
 window.onscroll = function (event) {
   var headerImgOffset = screenshot.getBoundingClientRect();
 var imgTop = headerImgOffset.top;

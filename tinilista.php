@@ -92,11 +92,10 @@
             </main>
 <script async defer src="js/main.js"></script> 
 <script>
-
-
-
-
-
+var viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+if(viewportWidth < 700){
+  fixed.classList.remove('fixedCSS');
+}
 /* Project Preview scrolling*/
 window.onscroll = function (event) {
   var headerImgOffset = screenshot.getBoundingClientRect();
