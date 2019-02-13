@@ -24,11 +24,11 @@
             <section id="preview">
                 <article id="fixed" class="fixedCSS">  
                         <h2>tinilista App</h2>
-Personal project <a href="https://codepen.io/saraconache/pen/gqjbJa">exploring</a> the concept of hybrid apps (applications created with web technologies - html, css, and js - later compiled into functioning mobile apps). This project also explores the usage web storage API localStorage() to store and retrieve data stored temporarily on the browser; making this a flexible and tiny list app (tinilista) where you can store small to dos and safe for later!</p>
+<p>Personal project exploring the concept of hybrid apps (applications created with web technologies - html, css, and js - later compiled into functioning mobile apps). This project also explores the usage web storage API localStorage() to store and retrieve data stored temporarily on the browser; making this a flexible and <a href="https://codepen.io/saraconache/pen/gqjbJa">tiny list app</a> (tinilista) where you can store small to dos and safe for later!</p>
 
     </article>
     <div id="screenshot">
-        <img src="images/projects/tinilista/tinilistamockup-01.jpg" alt="PeachnTeal website design mockup">
+        <img src="images/projects/tinilista/tinilistamockup-01.jpg" alt="tiniLista app design mockup">
   </div>
     </section>
     <section id="technologies">

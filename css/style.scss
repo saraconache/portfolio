@@ -1001,6 +1001,10 @@ img{
   display: grid;
   grid-gap: 1.1rem;
   grid-template-columns: 1fr 1fr 1fr;
+  a{
+    color:color(lightpink);
+    text-decoration: none;
+  }
   @include mobileMax{
     grid-template-columns: 1fr;
     grid-gap: 0.5rem;

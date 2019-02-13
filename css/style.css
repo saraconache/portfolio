@@ -1552,6 +1552,11 @@ nav.active ul {
       grid-template-columns: 1fr 1fr 1fr;
 }
 
+#dissection a {
+  color: #FD6C6E;
+  text-decoration: none;
+}
+
 @media (max-width: 450px) {
   #dissection {
     -ms-grid-columns: 1fr;

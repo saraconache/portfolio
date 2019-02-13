@@ -24,10 +24,10 @@
             <main id="works">
                     <section id="groupOne" class="patternA">
                       <div class="project workA1"><a href="peach.php"><img src="images/projects/previews/peachntealpreview.jpg" alt="PeachnTeal Project Animated Preview"></a></div>
-                      <div class="project workA2"><a href="mynte.php"><img src="images/projects/previews/myntepreview.png" alt="Mynte Project Animated Preview"></a></div>
-                      <div class="project workA3"><a href="winelab.php"><img src="images/projects/previews/winepreview.jpg" alt="Wine Lab Project Animated Preview"></a></div>
+                      <div class="project workA2"><a href="winelab.php"><img src="images/projects/previews/winepreview.jpg" alt="Wine Lab Project Animated Preview"></a></div>
+                      <div class="project workA3"><a href="vizualizr.php"><img src="images/projects/previews/vizualizrpreview.jpg" alt="Vizualizr Project Animated Preview"></a></div>
                       <div class="project workA4"><a href="tinilista.php"><img src="images/projects/previews/tinilistapreview.png" alt="tiniLista Project Animated Preview"></a></div>
-                      <div class="project workA5"><a href="vizualizr.php"><img src="images/projects/previews/vizualizrpreview.jpg" alt="Vizualizr Project Animated Preview"></a></div>
+                      <div class="project workA5"><a href="mynte.php"><img src="images/projects/previews/myntepreview.png" alt="Mynte Project Animated Preview"></a></div>
                     </section>
                     
                     <section id="groupTwo" class="patternB">
