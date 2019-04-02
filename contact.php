@@ -24,9 +24,8 @@
         <article>
             <h2>Find me at:</h2>
             <p>info [at] sarahvgomez [dot] com<br>
-                    saraconache.com<br>
-                    codepen.io/saraconache<br>
-                    github.com/saraconache</p>
+                    <a href="http://codepen.io/saraconache">codepen.io/saraconache</a><br>
+                    <a href="http://github.com/saraconache">github.com/saraconache</a></p>
         </article>
             <form action="handle.php" method="POST">
                 <div class="personalInfo">

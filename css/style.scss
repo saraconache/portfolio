@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=KoHo:400,700');
-$colors: ( /* SASS MAP is like an object */
+$colors: ( /* SASS MAP is like an object. */
     gray:#566270,
     turquoise: #55CCC3,
     green: #C8F26E,
@@ -372,13 +372,11 @@ nav.active ul {
   div img{
     height: 100%;
     width: 100%;
-  // filter:grayscale(100%);
-  //  transition: filter 0.4s;
+    object-fit: cover;
   }
   div img:hover{
-    // animation: move 2.5s infinite;
     opacity: 0;
-transition: 0.3s opacity;
+  transition: 0.3s opacity;
   }
   .mynte:hover{
     background-image: url("../images/projects/previews/mynte-bg.jpg");
@@ -546,7 +544,7 @@ transition: 0.3s opacity;
     font-size: 1rem;
     width: 70%;
     @include mobileMax{
-      width: 90%; 
+      width: 100%; 
     }
     @include mobile{
       width: 90%; 
@@ -667,6 +665,9 @@ margin-right: 2rem;
 grid-column: 3/4;
 grid-row: 2/3;
 text-align: right;
+a{
+  color: color(yellow);
+}
 @include mobileMax{
   margin: 2rem 2rem;
   grid-column: 1/2;

@@ -416,6 +416,8 @@ nav.active ul {
 #works div img {
   height: 100%;
   width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 #works div img:hover {
@@ -727,7 +729,7 @@ nav.active ul {
 
 @media (max-width: 450px) {
   #about section div {
-    width: 90%;
+    width: 100%;
   }
 }
 
@@ -953,6 +955,10 @@ nav.active ul {
   -ms-grid-row-span: 1;
   grid-row: 2/3;
   text-align: right;
+}
+
+#contact article a {
+  color: #ffd23f;
 }
 
 @media (max-width: 450px) {

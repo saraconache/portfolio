@@ -25,7 +25,7 @@
 <section>
    <div>
         <img src="images/profilePic.jpg" class="profilepic" alt="">   
-    <p>I’m Sarah Gomez. A multi-disciplinary developer&amp;designer, originally from the Dominican Republic, located in Calgary, Canada. Proficient in <span>Web Development, Graphic Design, Architecture Design, and Animation.</span></p></div> 
+    <p>I’m Sarah Gomez. A multi-disciplinary developer&amp;designer, originally from the Dominican Republic, located in Calgary, Canada. Proficient in <span>Web Development, Graphic Design, and Architecture Design.</span></p></div> 
   
 
 <article>
