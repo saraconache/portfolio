@@ -22,12 +22,12 @@
         <main id="intro" >  
             <p id="noJSnote">Please enable Javascript in your browser in order to see the full experience of this site.</p>
 <pre>
-/* introduce developer/designer */ 
+/* insert developer */ 
 var <span class="specialMethReg">sarahvgomez</span> = {
 career : 'front-end developer',
 life: <a href="about.php" title="sarahvgomez.bio">getBio()</a>,
-skills: ['html5', 'js', 'css3', 'sass', 'git'],
 work : <a href="works.php" title="sarahvgomez.work">portfolioWork()</a>,
+skills: ['html5', 'js', 'css3', 'sass', 'git'],
 contact : <a href="contact.php" title="sarahvgomez.contact">contactInfo()</a>
 };
 </pre>
