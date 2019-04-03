@@ -1427,8 +1427,15 @@ nav.active ul {
 }
 
 #screenshot video {
-  height: 100vh;
-  float: right;
+  width: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 2rem auto;
+  border: 18px solid black;
+  border-radius: 30px;
+  -webkit-box-shadow: 9px 10px 22px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 9px 10px 22px 0px rgba(0, 0, 0, 0.75);
 }
 
 #technologies {
