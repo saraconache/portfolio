@@ -33,9 +33,15 @@
                     <section id="groupTwo" class="patternB">
                         <div class="project workB1 afcc"><a href="afcc.php"><img src="images/projects/previews/afcc-fr.jpg" alt="AFCC Project Animated Preview"></a></div>
                         <div class="project workB2 dkki"><a href="dkki.php"><img src="images/projects/previews/dkki-fr.jpg" alt="DKKI Project Animated Preview"></a></div>
-                        <div class="project workB3 bigworld"><a href="bigworld.php"><img src="images/projects/previews/bigworld-fr.jpg" alt="Big World Project Animated Preview"></a></div>
-                        <div class="project workB4 hydrovac"><a href="jethydrovac.php"><img src="images/projects/previews/jethydrovac-fr.jpg" alt="Jet Hydrovac Project Animated Preview"></a></div>
+                        <div class="project workB3 saitnav"><a href="saitnav.php"><img src="images/projects/previews/saitnav-fr.png" alt="SAITNav Project Animated Preview"></a></div>
+                        <div class="project workB4 tasktracker"><a href="tasktracker.php"><img src="images/projects/previews/tasktracker-fr.png" alt="Task Tracker Project Animated Preview"></a></div>
+                        <div class="project workB5 giveamile"><a href="giveamile.php"><img src="images/projects/previews/giveamile-fr.png" alt="Give A Mile Project Animated Preview"></a></div>
                     </section>
+
+                    <section id="groupThree" class="patternA">
+                      <div class="project workA1 bigworld"><a href="bigworld.php"><img src="images/projects/previews/bigworld-fr.jpg" alt="Big World Project Animated Preview"></a></div>
+                      <div class="project workA2 hydrovac"><a href="jethydrovac.php"><img src="images/projects/previews/jethydrovac-fr.jpg" alt="Jet Hydrovac Project Animated Preview"></a></div>
+                     </section>
             </main>
 <script async defer src="js/main.js"></script> 
 <script async defer src="js/gridwork.js"></script> 

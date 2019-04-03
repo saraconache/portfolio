@@ -471,6 +471,21 @@ nav.active ul {
   background-size: contain;
 }
 
+#works .saitnav:hover {
+  background-image: url("../images/projects/previews/saitnav-bg.jpg");
+  background-size: contain;
+}
+
+#works .tasktracker:hover {
+  background-image: url("../images/projects/previews/tasktracker-bg.png");
+  background-size: contain;
+}
+
+#works .giveamile:hover {
+  background-image: url("../images/projects/previews/giveamile-bg.png");
+  background-size: contain;
+}
+
 /* Main - Works ends */
 @-webkit-keyframes move {
   0% {
@@ -1385,6 +1400,10 @@ nav.active ul {
   margin-bottom: 1rem;
 }
 
+#preview article p {
+  margin: 1rem 0;
+}
+
 #preview .fixedCSS {
   position: fixed;
   left: 90px;
@@ -1427,11 +1446,13 @@ nav.active ul {
 }
 
 #screenshot video {
-  width: 300px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin: 2rem auto;
+}
+
+#screenshot .mobile {
   border: 18px solid black;
   border-radius: 30px;
   -webkit-box-shadow: 9px 10px 22px 0px rgba(0, 0, 0, 0.75);

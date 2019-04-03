@@ -2,7 +2,7 @@
 <html class="no-js autoHeight" lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Works &raquo; SAITNav | Sarah V. Gomez Portfolio</title>
+        <title>Works &raquo; Task Tracker | Sarah V. Gomez Portfolio</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/speechbubbles.css">
@@ -45,13 +45,11 @@
         <main id="project">
             <section id="preview">
                 <article id="fixed" class="fixedCSS">  
-                        <h2>SAITNav</h2>
-<p>SAITNav is an academic group project developed as our <a href="https://www.sait.ca/programs-and-courses/full-time-studies/diplomas/new-media-production-and-design">NMPD</a> capstone project. This project explored working with augmented reality to create a wayfinding solution for SAIT’s campus. We decided to use front-end web technologies, graphic design <a href="http://tamiamuller.com/">video production</a>, <a href="http://hectorarevalo.ca/">3D modeling</a>, and <a href="http://www.angela-castro.com">animation</a>. </p>
-
-<p>As the person responsible for the web app's development, it required studying on the browser’s current capability of recreating AR experiences with the use of existing WebGL-AR JavaScript libraries. </p>
+                        <h2>Task Tracker</h2>
+<p>The task tracker is a personal project exploring Angular component-centered's framework. This is the first time I'm exploring design interpreted as components. This project also allowed me to learn key concepts on Typescript. This project's main focus is development, which is why I opted to rely on Bootstrap to handle stylistic decisions. </p>
 
     </article>
-    <div id="screenshot" style="background:#005EB8;">
+    <div id="screenshot">
         <div id="bubbleOne_p1">
         Single page Wordpress layout. Each section pulls a Wordpress page content.
         </div>
@@ -61,66 +59,68 @@
         <div id="bubbleThree_p1">
         Portfolio section pulls a different work on each page load. Showcasing the project.
         </div>
-        <img src="images/projects/saitnav/SAITnav_mockup.png" alt="PeachnTeal website design mockup">
+        <img src="images/projects/tasktracker/tracker_mockup.png" alt="Task Tracker website design mockup">
 
-        <video style="width: 300px;" class="mobile" src="images/projects/saitnav/saitnav_demo.mp4" controls playsinline loop muted></video>
+        <video class="mobile" style="width:90%;" src="images/projects/tasktracker/tasktracker.mp4" controls playsinline loop muted></video>
         
   </div>
     </section>
     <section id="technologies">    
 <h2>Technologies <span>Used</span></h2>
 <div>
-    <img src="images/in-ico.svg" alt="Invision Icon">
-    <img src="images/js-ico.svg" alt="JS Icon">
+    <img src="images/angular-ico.svg" alt="Angular Icon">
     <img src="images/html-ico.svg" alt="HTML5 Icon">
-    <img src="images/css-ico.svg" alt="CSS3 Icon">
+    <img src="images/typescript-ico.svg" alt="Typescript Icon">
     <img src="images/sass-ico.svg" alt="SaSS Icon">
+    <img src="images/bootstrap-ico.svg" alt="Bootstrap Icon">
   </div>
     </section>  
     <section id="dissection">
    <div id="smallPara">
     <h2>Technical Challenges</h2>
-    <p>Using <a href="https://aframe.io/">A-FRAME</a>, a leading AR Javascript framework made for building augmented reality experiences on the web, we were able to use HTML5 markup to set up different scenes composed of cameras, anchors, models, and lights. </p>
+    <p>This project’s greatest challenges were having to learn how Angular framework works. This was especially complex coming from a vanilla javascript background. Although Angular can work on javascript alone, best practice is to develop using Typescript. This was also a development challenge.</p>
   
 
    </div>
    <div id="codepen">
      <pre>
-    &lt;a-scene embedded arjs="debugUIEnabled: false; 
-    trackingMethod: best;" vr-mode-ui="enabled: false"&gt
-    &lt;a-entity&gt;
-    &lt;a-marker-camera preset="custom" type="pattern" 
-    url="pattern.patt">&lt;/a-marker-camera&gt;
-    &lt;a-text value="TO SENATOR BURNS BUILDING" width="1.5" 
-    wrap-count="16" align="center" position="-0.1 0.3 0.9" 
-    rotation="-90 0 0" shader="msdf" 
-    font="TitilliumWeb-Regular.json" color="white"&gt;
-    &lt;/a-text&gt;&lt;/a-entity&gt;
-        
-    &lt;a-entity geometry="primitive:plane;" rotation="-90 0 0" 
-    position="0 -0.2 -0.3"  scale="1.9 2.9 0" 
-    material="shader:gif;src:url(CC2SB.gif);" 
-    gif=""&gt;&lt;/a-entity&gt;&lt;a-gltf-model src="arrow.gltf" 
-    position="0 0 1.3" rotation="-10 180 0" scale="1 1 1" 
-    width="1" height="1" depth="1" 
-    animation-mixer="loop:repeat"&gt;&lt;/a-gltf-model&gt;
-    &lt;/a-scene&gt;
+    &lt;tr *ngFor="let task of taskList; 
+    let i = index"&gt;
+    &lt;td&gt;{{ i + 1 }}&lt;/td&gt;
+    &lt;td&gt;{{task.title}} &lt;/td&gt;
+    &lt;td&gt;{{task.description}}&lt;/td&gt;
+    &lt;td&gt;
+    &lt;select class="custom-select" 
+    [(ngModel)]="task.status" 
+    [ngClass]="task.status" name="statusOptions"&gt;
+    &lt;option selected&gt;{{task.status}}&lt;/option&gt;
+    &lt;option value="Completed"&gt;Completed &lt;/option&gt;
+    &lt;option value="Planning"&gt;Planning&lt;/option&gt;
+    &lt;/select&gt;
+    &lt;/td&gt;
+    &lt;td&gt;
+    {{task.timeHour + 'h ' + task.timeMin + 'm'}}
+    &lt;/td&gt;
+    &lt;td&gt;&lt;button (click)="removeTask(i)"&gt;
+    &#10005;
+    &lt;/button&gt;
+    &lt;/td&gt;&lt;/tr&gt;
      </pre>
    </div>
    <div>
     <h2>&lt;article id='<span class="htmlTitle">basicmarkup</span>'&lt;/article&gt;</h2>
-    <p>Each scene corresponds to a specific instruction on how to get to a destination and it is composed of a 3D animated arrow model, an instructional video, and a guide text.</p>
+    <p>Angular's data-binding directives are used to extend HTML5's capabilities. </p>
    </div>
 
     <div>
             <h2>#<span class="cssTitle">styles</span>{display: block;}</h2>
-        <p>As a web app solution for SAIT, CSS styles were adjusted to ensure SAIT Brand guidelines.</p>
+        <p>Used pre-defined styles from Bootstrap 4 to style web app.</p>
 
     </div>
   
    <div>
-        <h2>var title = '<span class="jsTitle">javascript rocks</span>';</h2>
-        <p>HTML5 geolocation API was used to serve the user the correct set of directions depending on where they were located within campus. </p>
+        <h2>export class <span class="jsTitle">Typescript</span></h2>
+        <p>Typescript was explored in this solution as oposed to using ol' vanilla Javascript.</p>
    </div>
  
             </section>

@@ -414,6 +414,18 @@ nav.active ul {
     background-image: url("../images/projects/previews/jethydrovac-bg.jpg");
     background-size: contain;
   }
+  .saitnav:hover{
+    background-image: url("../images/projects/previews/saitnav-bg.jpg");
+    background-size: contain;
+  }
+  .tasktracker:hover{
+    background-image: url("../images/projects/previews/tasktracker-bg.png");
+    background-size: contain;
+  }
+  .giveamile:hover{
+    background-image: url("../images/projects/previews/giveamile-bg.png");
+    background-size: contain;
+  }
 } /* Main - Works ends */
 
 @keyframes move{
@@ -911,6 +923,9 @@ flex-direction: column;
       font-family: "Lucida Console", Monaco, monospace;
       margin-bottom: 1rem;
     }
+    p{
+      margin:1rem 0;
+    }
   }
   .fixedCSS{
     position: fixed;
@@ -940,10 +955,11 @@ flex-direction: column;
   }
   video{
     // height: 100vh;
-    // float: right;
-    width: 300px;
+    // width: 50%;
     display: flex;
     margin: 2rem auto;
+  }
+  .mobile{
     border: 18px solid black;
     border-radius: 30px;
     -webkit-box-shadow: 9px 10px 22px 0px rgba(0,0,0,0.75);

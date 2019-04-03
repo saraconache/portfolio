@@ -46,9 +46,9 @@
             <section id="preview">
                 <article id="fixed" class="fixedCSS">  
                         <h2>Peach &amp; Teal</h2>
-<p><a href="http://www.peachnteal.com">Peach & Teal</a> is a start up business in party planning and personalized favors. Their main market will be mainly online, where they want to be able to offer their packages as well as their consultation services. The main challenge of this project is to be able to design a simple yet elegant ecommerce site that offers a first introductory page with all of the necessary information regarding their company and what they do. 
+<p><a href="http://www.peachnteal.com">Peach & Teal</a> is a start up business in party planning and personalized favors. Their main market will be mainly online, where they want to be able to offer their packages as well as their consultation services. The main challenge of this project is to be able to design a simple yet elegant ecommerce site that offers a first introductory page with all of the necessary information regarding their company and what they do. </p>
 
-This project was designed at every scale, from branding, logo, and color guidelines, to the wireframe, mock-ups, front-end markup to CMS platform development. 
+<p>This project was designed at every scale, from branding, logo, and color guidelines, to the wireframe, mock-ups, front-end markup to CMS platform development. 
 </p>
 
     </article>
